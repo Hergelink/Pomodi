@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(244,242,240,255);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+section {
+    /* height: 100vh;
+    width: 100%; */
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#site-logo {
+    width: 250px;
+    display: block;
+    margin: 1rem auto;
+}
+
+.container {
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: rgba(53,68,254,255);
+}
+
+
+#countdown {
+   margin: auto;
+   color: rgba(244,242,240,255);
+   background-color: rgba(53,68,254,255);
+   font-size: 5rem; 
+}
+
+audio {
+    display: hidden;
+}
+
+
+
+/* 
+
+blue-color: rgba(53,68,254,255)
+
+grey-color: rgba(244,242,240,255)
+
+
+
+*/
