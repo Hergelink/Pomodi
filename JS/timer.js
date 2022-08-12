@@ -9,10 +9,20 @@ let timeSecond = 900;
 displayTime(timeSecond);
 
 const countDown = setInterval(() => {
-    // setInterval(() => {
+    
     timeSecond--;
     displayTime(timeSecond);
+
+
+
+
+   
+
+
+
+
     if (timeSecond <= 0 || timeSecond < 1) {
+    
         endTime();
         clearInterval(countDown)
     }
