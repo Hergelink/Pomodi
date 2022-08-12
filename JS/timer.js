@@ -1,13 +1,15 @@
 const timeH = document.getElementById('countdown');
 const breakSound = document.getElementById('break-sound');
 
-const containerElement = document.getElementById('container');
-let timeSecond = 120;
+const containerElement = document.querySelector('container');
+
+let timeSecond = 2;
 
 // timeH.innerHTML = `00:${timeSecond}`;
 displayTime(timeSecond);
 
 const countDown = setInterval(() => {
+    // setInterval(() => {
     timeSecond--;
     displayTime(timeSecond);
     if (timeSecond <= 0 || timeSecond < 1) {
@@ -24,6 +26,7 @@ function displayTime(second) {
 
 function endTime() {
     timeH.innerHTML = 'Break';
+    
     breakSound.play();
 }
 
