@@ -3,7 +3,7 @@ const breakSound = document.getElementById('break-sound');
 
 const containerElement = document.querySelector('container');
 
-let timeSecond = 2;
+let timeSecond = 900;
 
 // timeH.innerHTML = `00:${timeSecond}`;
 displayTime(timeSecond);
