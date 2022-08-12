@@ -45,7 +45,7 @@ section {
 #countdown {
    margin: auto;
    color: rgba(244,242,240,255);
-   background-color: rgba(53,68,254,255);
+   background-color: transparent;
    font-size: 5rem; 
 }
 
@@ -55,18 +55,14 @@ audio {
 
 @media only screen and (min-width: 800px) {
     .container {
-        
         width: 40rem;
         height: 40rem;
         margin-top: 10rem;
-        
-        
-       
     }
     
     #countdown {
-      
         font-size: 10rem; 
      }
+
 
   }
