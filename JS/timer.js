@@ -1,10 +1,17 @@
 const timeH = document.getElementById('countdown');
 const breakSound = document.getElementById('break-sound');
+const startButton = document.getElementById('start');
 
 const containerElement = document.querySelector('container');
 
 let timeSecond = 1500;
 
+
+function startPomodoro() {
+
+    if (startButton.innerHTML == 'Start') {
+        startButton.innerHTML = 'Focus'
+    } 
 
 // timeH.innerHTML = `00:${timeSecond}`;
 displayTime(timeSecond);
@@ -34,11 +41,8 @@ function endTime() {
     breakSound.play();
 }
 
-containerElement.addEventListener('click', startCountdown);
 
-function startCountdown() {
-    displayTime(second);
+
 }
 
-
-
+startButton.addEventListener('click', startPomodoro);

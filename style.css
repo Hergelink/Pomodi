@@ -41,6 +41,19 @@ section {
     background-color: rgba(53,68,254,255);
 }
 
+#start {
+    display: block;
+    margin-inline: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: rgba(244,242,240,255);
+    background-color: rgba(53,68,254,255);
+}
+
 
 #countdown {
    margin: auto;
