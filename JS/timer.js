@@ -9,6 +9,7 @@ const displayButtonElement = document.getElementById('display');
 //site favicon
 const icon = document.getElementById('site-icon');
 
+let informationElements = document.getElementsByClassName('information');
 
 
 let timeSecond = 1500;
@@ -21,6 +22,10 @@ let num = 0.06666666666;
 
 function startPomodoro() {
     startButton.style.display = 'none';
+ 
+    informationElements[0].style.display = 'none';
+    informationElements[1].style.display = 'none';
+    informationElements[2].style.display = 'none';
 
   if (startButton.innerHTML == 'Start') {
     startButton.innerHTML = 'Focus';
