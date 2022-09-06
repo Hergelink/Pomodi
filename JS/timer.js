@@ -4,45 +4,84 @@ const startButton = document.getElementById('start');
 
 const containerElement = document.querySelector('container');
 
+const innerCircleElement = document.getElementById('inner-circle');
+const displayButtonElement = document.getElementById('display');
+
 let timeSecond = 1500;
+let num = 0.06666666666;
+
+
+
 
 
 function startPomodoro() {
+    startButton.style.display = 'none';
 
-    if (startButton.innerHTML == 'Start') {
-        startButton.innerHTML = 'Focus'
-    } 
+  if (startButton.innerHTML == 'Start') {
+    startButton.innerHTML = 'Focus';
+  }
 
-// timeH.innerHTML = `00:${timeSecond}`;
-displayTime(timeSecond);
+    // Expending inner-circle div until its width equals outer container:
+      const expand = setInterval(function (){ 
+        num += 0.06666666666;
+        
+      
+        innerCircleElement.style.width = num + '%';
+        innerCircleElement.style.height = num + '%';
 
-const countDown = setInterval(() => {
-    
+        if (num > 100) {
+            clearInterval(expand);
+          }
+
+      },1000);
+
+   
+
+
+
+  // timeH.innerHTML = `00:${timeSecond}`;
+  displayTime(timeSecond);
+
+  const countDown = setInterval(() => {
     timeSecond--;
     displayTime(timeSecond);
 
-
     if (timeSecond <= 0 || timeSecond < 1) {
-    
-        endTime();
-        clearInterval(countDown)
+      endTime();
+      clearInterval(countDown);
     }
-},1000)
+  }, 1000);
 
-function displayTime(second) {
+  function displayTime(second) {
     const min = Math.floor(second / 60);
     const sec = Math.floor(second % 60);
-    timeH.innerHTML = `${min < 10 ? '0': ''}${min}:${sec < 10 ? '0': ''}${sec}`;
-}
+    timeH.innerHTML = `${min < 10 ? '0' : ''}${min}:${
+      sec < 10 ? '0' : ''
+    }${sec}`;
+  }
 
-function endTime() {
+  function endTime() {
     timeH.innerHTML = 'Break';
-    
+
     breakSound.play();
-}
-
-
-
+  }
 }
 
 startButton.addEventListener('click', startPomodoro);
+
+console.log(innerCircleElement.style.display)
+
+
+// change the display from digital clock to visual circle:
+function changeDisplay() {
+
+    if (timeH.style.display !== 'none') {
+        timeH.style.display = 'none';
+        innerCircleElement.style.display = 'block';
+    } else {
+        timeH.style.display = 'block';
+        innerCircleElement.style.display = 'none';
+    }
+}
+
+displayButtonElement.addEventListener('click', changeDisplay);
