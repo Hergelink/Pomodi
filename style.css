@@ -16,6 +16,13 @@ h1 {
   font-size: 1rem;
 }
 
+#site-logo {
+    width: 250px;
+    display: block;
+    margin: 1rem auto;
+    cursor: pointer;
+  }
+
 section {
   margin-top: 2.5rem;
   display: flex;
@@ -23,12 +30,7 @@ section {
   justify-content: space-between;
 }
 
-#site-logo {
-  width: 250px;
-  display: block;
-  margin: 1rem auto;
-  cursor: pointer;
-}
+
 
 .container {
   /* display: flex; */
@@ -108,7 +110,7 @@ audio {
   .container {
     width: 40rem;
     height: 40rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
 
   #countdown {
@@ -121,3 +123,22 @@ audio {
     font-size: 1.4rem;
   }
 }
+
+
+@media only screen and (min-width: 1285px) {
+    .container {
+      width: 50rem;
+      height: 50rem;
+      margin-top: 4rem;
+    }
+  
+    #countdown {
+      font-size: 10rem;
+    }
+  
+    #start {
+      width: 150px;
+      height: 150px;
+      font-size: 1.4rem;
+    }
+  }
