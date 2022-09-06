@@ -6,9 +6,14 @@ const containerElement = document.querySelector('container');
 
 const innerCircleElement = document.getElementById('inner-circle');
 const displayButtonElement = document.getElementById('display');
+//site favicon
+const icon = document.getElementById('site-icon');
+
+
 
 let timeSecond = 1500;
 let num = 0.06666666666;
+
 
 
 
@@ -25,12 +30,15 @@ function startPomodoro() {
       const expand = setInterval(function (){ 
         num += 0.06666666666;
         
+        
       
         innerCircleElement.style.width = num + '%';
         innerCircleElement.style.height = num + '%';
 
         if (num > 100) {
             clearInterval(expand);
+            // changes the favicon to red-circle to indicate that the time has run out!
+            icon.href = "/images/red-favicon.ico";
           }
 
       },1000);
@@ -69,7 +77,6 @@ function startPomodoro() {
 
 startButton.addEventListener('click', startPomodoro);
 
-console.log(innerCircleElement.style.display)
 
 
 // change the display from digital clock to visual circle:
