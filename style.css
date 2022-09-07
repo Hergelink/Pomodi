@@ -16,30 +16,28 @@ h1 {
   font-size: 1rem;
 }
 
+#site-logo {
+  width: 250px;
+  display: block;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
 .information {
   display: block;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-top: 0.2rem;
-  font-weight: bold; 
+  font-weight: bold;
   color: rgb(105, 105, 105);
 }
 
-#site-logo {
-    width: 250px;
-    display: block;
-    margin: 1rem auto;
-    cursor: pointer;
-  }
-
 section {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-
 
 .container {
   /* display: flex; */
@@ -110,7 +108,6 @@ section {
   cursor: pointer;
 }
 
-
 audio {
   display: hidden;
 }
@@ -133,21 +130,20 @@ audio {
   }
 }
 
-
 @media only screen and (min-width: 1285px) {
-    .container {
-      width: 50rem;
-      height: 50rem;
-      margin-top: 4rem;
-    }
-  
-    #countdown {
-      font-size: 10rem;
-    }
-  
-    #start {
-      width: 150px;
-      height: 150px;
-      font-size: 1.4rem;
-    }
+  .container {
+    width: 50rem;
+    height: 50rem;
+    margin-top: 4rem;
   }
+
+  #countdown {
+    font-size: 10rem;
+  }
+
+  #start {
+    width: 150px;
+    height: 150px;
+    font-size: 1.4rem;
+  }
+}
