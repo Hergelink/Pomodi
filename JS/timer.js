@@ -16,7 +16,8 @@ let informationElements = document.getElementsByClassName('information');
 
 
 let timeSecond = 1500;
-let num = 0.06666666666;
+// let num = 0.06666666666;
+let num = 0;
 
 
 
