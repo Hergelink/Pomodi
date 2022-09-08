@@ -1,3 +1,6 @@
+//getting the inner height of the viewport for css:
+let vh = window.innerHeight * 0.01;
+
 const timeH = document.getElementById('countdown');
 const breakSound = document.getElementById('break-sound');
 const startButton = document.getElementById('start');
